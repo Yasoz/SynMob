@@ -1,4 +1,4 @@
-# Dataset Name
+# SynthTraj
 
 ## Introduction
 
@@ -8,19 +8,29 @@ This dataset is a high-fidelity synthetic GPS trajectory dataset designed for ur
 
 - **Synthetic Nature**: The trajectory data in this dataset is generated through simulation and is not real GPS data.
 - **High Fidelity**: The generated trajectory data aims to preserve spatial and temporal characteristics similar to real-world data.
-- **Coverage**: The dataset covers multiple cities or regions, including but not limited to: [List city names here].
-- **Diversity**: The dataset includes various types of movement patterns, such as walking, driving, public transportation, as well as different traffic scenarios such as city centers, residential areas, etc.
+- **Coverage**: The dataset covers major areas in several cities, including: Chengdu and Xi'an.
+- **Diversity**: The dataset includes various types of movement patterns and human behaviors.
 
 ## Dataset Usage
 
 ### Data Format
 
-The dataset is stored in a common CSV format, with each row representing a trajectory sample. Each sample typically includes the following fields:
+The dataset is stored in the common **pickle** format, with two separate files for attribute information and trip trajectory. For attribute information, each example typically includes the following fields:
 
-- **Timestamp**: Records the time information of the trajectory point.
-- **Longitude**: Longitude coordinate of the trajectory point.
-- **Latitude**: Latitude coordinate of the trajectory point.
-- **Additional Fields**: It may also include other mobility-related information such as speed, direction, etc.
+- **Trip distance**: Records the distance for each trip.
+- **Trip time**: The total time of the trip
+- **Departure time**: The time of trip start, with 5-min duration for each value.
+- **Sample points**: Total number of trajectory sampling points for each trip.
+
+For the trip trajectory, each sample is represented as  a sequence of successively sampled GPS points with recorded **longitude** and **latitude**, respectively
+
+### Data Access
+
+You can access the dataset from the following [here](https://www.google.com)
+
+### Data License
+
+This dataset follows the [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. This license allows reusers to distribute, remix, adapt, and build upon the material in any medium or format for noncommercial purposes only, and only so long as attribution is given to the creator. If you remix, adapt, or build upon the material, you must license the modified material under identical terms.
 
 ### Sample Code
 
@@ -30,25 +40,24 @@ You can use the following sample code to load and utilize the dataset:
 pythonCopy code
 import pandas as pd
 
-# Load the dataset
-dataset = pd.read_csv('dataset.csv')
+# Load the attributes
+attr_path = './attrs.pkl'
+with open(attr_path, 'rb') as f:
+    attrs = pickle.load(f)
+   
+# Load the attributes
+trajs_path = './trajs.pkl'
+with open(trajs_path, 'rb') as f:
+    atttrajsrs = pickle.load(f)
 
 # Write your data analysis, model training, etc. code here
 # ...
 ```
 
-### Data License
-
-Please specify the license information for your dataset, including how you want other users to use, share, and modify the dataset.
-
 ### Acknowledgments
 
-In this section, you can acknowledge individuals or organizations that have contributed to your project and dataset.
+The dataset is based on the [Didi Chuxing GAIA initiative](https://outreach.didichuxing.com/). All data is synthetic and removed from the privacy risk.
 
 ## Feedback and Contributions
 
 If you have any questions or suggestions regarding the dataset, or if you would like to contribute to the dataset, please feel free to contact us or submit issues and requests. We welcome and appreciate your feedback and contributions.
-
-## Additional Notes
-
-Mention any additional dataset-related notes, data preprocessing steps, explanations of specific fields, or any other relevant information here.
