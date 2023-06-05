@@ -48,7 +48,7 @@ with open(attr_path, 'rb') as f:
 # Load the attributes
 trajs_path = './trajs.pkl'
 with open(trajs_path, 'rb') as f:
-    atttrajsrs = pickle.load(f)
+    trajs = pickle.load(f)
 
 # Write your data analysis, model training, etc. code here
 # ...
