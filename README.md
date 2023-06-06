@@ -26,7 +26,7 @@ For the trip trajectory, each sample is represented as  a sequence of successive
 
 ### Data Access
 
-You can access the dataset from the following [here](https://www.google.com)
+You can access the dataset from the following [here](https://drive.google.com/drive/folders/1WLQ-JQar1_SteDY4zP2u6rzaIbq7v2l8?usp=sharing)
 
 ### Data License
 
