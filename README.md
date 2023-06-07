@@ -38,14 +38,14 @@ You can use the following sample code to load and utilize the dataset:
 
 ```
 pythonCopy code
-import pandas as pd
+import pickle
 
 # Load the attributes
 attr_path = './attrs.pkl'
 with open(attr_path, 'rb') as f:
     attrs = pickle.load(f)
    
-# Load the attributes
+# Load the trajectories
 trajs_path = './trajs.pkl'
 with open(trajs_path, 'rb') as f:
     trajs = pickle.load(f)
