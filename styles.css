@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+.header {
+    background: linear-gradient(to bottom,  #3490de, #6fe7dd);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.header p {
+    font-size: 24px;
+    margin: 10px 10 20px 0;
+}
+
+.header h1, .header p, .buttons {
+    margin-bottom: 20px;
+}
+
+
+.button-link {
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.button-link button {
+    background-color: #a6e3e9;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 5px;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    /* transition: background-color 0.3s; */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    
+}
+
+.button-link button:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: scale(1.05);
+    /* 背景颜色深化 */
+    background-color: #ddd;
+    /* 阴影效果 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+hr {
+    border-top: 1px solid #702a2a;
+    opacity: 7;
+}
+
+.content {
+    padding: 5px;
+    
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-left: 50px;
+    text-align: left;
+    /* background-color: #e6e6e6; */
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border-left: 5px solid #009688;
+    border-right: 5px solid #009688;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.header, .buttons {
+    /* 设置动画 */
+    animation: fadeInDown 0.8s forwards;
+    
+    /* 初始状态，使元素在动画开始前保持不可见状态 */
+    opacity: 0;
+}
+
+
+.content p {
+    font-size: 18px;
+    margin-left: 50px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 36px;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+}
+
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px;
+}
+
+.image-gallery img {
+    width: 50%; /* or adjust as needed */
+    border: 1px solid #458772;
+    padding: 5px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s;
+    animation: fadeInUp 1s forwards; /* 动画 */
+    margin-bottom: 20px; /* 为图片间增加间距 */
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.citation-box {
+    margin: 20px 50px;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 增加阴影 */
+    width: 60%;
+}
+
+.citation-box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #009688;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.citation-box textarea {
+    width: 90%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: border 0.3s; /* 加入过渡效果 */
+}
+
+.citation-box textarea:hover, .citation-box textarea:focus {
+    border: 1px solid #009688; /* 鼠标悬停和聚焦时改变边框颜色 */
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(to right, #a8e6cf, #c3bef0);
+    margin-top: 20px;
+    font-size: 14px;
+    margin-left: -20px;
+}
+
+/* ... */
