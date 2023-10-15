@@ -339,3 +339,25 @@ footer {
         font-size: 36px;
     }
 }
+@media only screen and (max-width: 600px) {
+    .image-gallery {
+        flex-direction: column;
+        /* Stack images vertically on small screens */
+        align-items: center;
+        /* Center the images */
+        margin-left: 0;
+        /* Remove the left margin */
+    }
+
+        .img-wrapper {
+            width: 80%;
+            /* Make images take up most of the screen width */
+            margin: 10px 0;
+            /* Adjust the vertical margin */
+        }
+    
+        .img-wrapper img {
+            margin-bottom: 10px;
+            /* Adjust the bottom margin */
+        }
+        }
