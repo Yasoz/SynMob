@@ -1,9 +1,8 @@
 body {
     background-color: #e6f7ff;
     font-family: Arial, sans-serif;
-    margin: 0
+    margin: 0;
 }
-
 
 .header {
     background: linear-gradient(to bottom,  #3490de, #6fe7dd);
@@ -14,23 +13,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeInDown 0.8s forwards;
+        opacity: 0;
 }
 
-
 .header h1 {
-    margin: 0;
+    margin: 0 0 20px 0;
     font-size: 48px;
 }
 
 .header p {
     font-size: 24px;
-    margin: 10px 10 20px 0;
+    margin: 10px 10px 20px 0;
 }
-
-.header h1, .header p, .buttons {
-    margin-bottom: 20px;
-}
-
 
 .button-link {
     text-decoration: none;
@@ -41,89 +36,82 @@ body {
     background-color: #a6e3e9;
     border: none;
     padding: 15px 30px;
-    margin: 0 5px;
-    margin-top: 20px; 
-    margin-bottom: 20px;
+    margin: 0 5px 20px 5px;
     font-size: 20px;
     border-radius: 15px;
     cursor: pointer;
-    /* transition: background-color 0.3s; */
     transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-    
 }
 
 .button-link button:hover {
-    background-color: #e6e6e6;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transform: scale(1.05);
-    /* 背景颜色深化 */
-    background-color: #ddd;
-    /* 阴影效果 */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background-color: #dddddd;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.25);
 }
 
-hr {
-    border-top: 1px solid #702a2a;
-    opacity: 7;
-}
 
-.content {
+.intro {
     padding: 5px;
-    
 }
 
-.content h2 {
-    font-size: 24px;
-    margin-left: 5px;
-    text-align: left;
-}
-
-.content h2 {
+.intro h2 {
     font-size: 24px;
     margin-left: 50px;
     text-align: left;
-    /* background-color: #e6e6e6; */
     display: inline-block;
-    padding: 5px 20px;
-    border-radius: 10px;
-    border-left: 5px solid #009688;
-    border-right: 5px solid #009688;
-}
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
+        padding: 5px 20px;
+            border-radius: 10px;
+            border-left: 5px solid #009688;
+            border-right: 5px solid #009688;
+        }
+                                                                                                                                .intro h2:hover {
+                                                                                                                                    background-color: #00968780;
+                                                                                                                                    color: white;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.header, .buttons {
-    /* 设置动画 */
-    animation: fadeInDown 0.8s forwards;
-    
-    /* 初始状态，使元素在动画开始前保持不可见状态 */
-    opacity: 0;
-}
-
-
-.content p {
+                                                                                                                                .content {
+                                                                                                                                    padding: 5px;
+                                                                                                                                }
+.intro p {
     font-size: 18px;
     margin-left: 50px;
     text-align: left;
 }
 
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 36px;
-    }
-
-    .header p {
-        font-size: 18px;
-    }
+/* 让图片居中， */
+.intro img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    border: 1px solid #458772;
+    padding: 5px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-50px);
+        transition: all 0.5s;
+        animation: fadeInUp 1s forwards;
+        margin-bottom: 20px;
 }
 
+.content h2 {
+    font-size: 24px;
+    margin-left: 50px;
+    text-align: left;
+    display: inline-block;
+        padding: 5px 20px;
+        border-radius: 10px;
+        border-left: 5px solid #009688;
+        border-right: 5px solid #009688;
+}
+.content h2:hover {
+    background-color: #00968780;
+    color: white;
+}
+
+.content p {
+    font-size: 18px;
+    margin-left: 50px;
+        text-align: left;
+}
 
 .image-gallery {
     display: flex;
@@ -132,17 +120,74 @@ hr {
 }
 
 .image-gallery img {
-    width: 50%; /* or adjust as needed */
+    width: 50%;
     border: 1px solid #458772;
     padding: 5px;
     border-radius: 10px;
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-50px);
     transition: all 0.5s;
-    animation: fadeInUp 1s forwards; /* 动画 */
-    margin-bottom: 20px; /* 为图片间增加间距 */
+    animation: fadeInUp 1s forwards;
+        margin-bottom: 20px;
+}
+/* when hover the image-gallery, make it zoom up and display in center */
+.image-gallery:hover img {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.citation-box {
+    margin: 20px 50px;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 55%;
+}
+
+.citation-box h3 {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #009688;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.citation-box textarea {
+    width: 98%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: border 0.3s;
+        background: #c3bef029;
+        color: #2e1210;
+}
+
+.citation-box textarea:hover, .citation-box textarea:focus {
+    border: 1px solid #009688;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(to right, #a8e6cf, #c3bef0);
+    font-size: 14px;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes fadeInUp {
     to {
@@ -151,48 +196,12 @@ hr {
     }
 }
 
-
-
-.citation-box {
-    margin: 20px 50px;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 增加阴影 */
-    width: 60%;
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 36px;
+    }
 }
 
-.citation-box h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #009688;
-    display: inline-block;
-    padding-bottom: 5px;
+.header p {
+    font-size: 18px;
 }
-
-.citation-box textarea {
-    width: 90%;
-    height: 120px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
-    transition: border 0.3s; /* 加入过渡效果 */
-}
-
-.citation-box textarea:hover, .citation-box textarea:focus {
-    border: 1px solid #009688; /* 鼠标悬停和聚焦时改变边框颜色 */
-}
-
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: linear-gradient(to right, #a8e6cf, #c3bef0);
-    margin-top: 20px;
-    font-size: 14px;
-    margin-left: -20px;
-}
-
-/* ... */
