@@ -10,6 +10,14 @@ This dataset is a high-fidelity synthetic GPS trajectory dataset designed for ur
 - **High Fidelity**: The generated trajectory data aims to preserve spatial and temporal characteristics similar to real-world data.
 - **Coverage**: The dataset covers major areas in several cities, including: Chengdu and Xi'an.
 - **Diversity**: The dataset includes various types of movement patterns and human behaviors.
+-  **Availability**: This synthetic dataset is publicly available, and no concerns about privacy.
+- **Scalability**: The trajectory synthesizer can generate an arbitrary amount of synthetic trajectories.
+
+### Trajectories Examples
+
+<img src="./imgs/cd_multi_trips.gif" height=300><img src="./imgs/cd_od_trips.gif" height=300>
+
+<img src="./imgs/xa_multi_trips.gif" height=300><img src="./imgs/xa_od_trips.gif" height=300>
 
 ## Dataset Usage
 
