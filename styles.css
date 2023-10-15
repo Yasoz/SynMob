@@ -128,7 +128,6 @@ table {
     border-collapse: collapse;
     margin: 10px 0;
     margin-left: 50px;
-    margin-top: 30px;
     font-size: 0.9em;
     color: #333;
 }
@@ -177,6 +176,22 @@ table a {
 table a:hover {
     text-decoration: underline;
 }
+.summtable h2 {
+    font-size: 24px;
+    margin-left: 50px;
+    margin-top: 30px;
+    text-align: left;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border-left: 5px solid #009688;
+    border-right: 5px solid #009688;
+}
+
+.summtable h2:hover {
+    background-color: #00968780;
+    color: white;
+}
 .content h2 {
     font-size: 24px;
     margin-left: 50px;
@@ -187,6 +202,7 @@ table a:hover {
         border-left: 5px solid #009688;
         border-right: 5px solid #009688;
 }
+
 
 .content h2:hover {
     background-color: #00968780;
