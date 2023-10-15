@@ -1,4 +1,4 @@
-# SynthTraj
+# [SynthTraj](https://yasoz.github.io/SynthTraj/)
 
 ## Introduction
 
