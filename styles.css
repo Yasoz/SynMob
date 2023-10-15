@@ -51,8 +51,12 @@ body {
 
 
 .intro {
-    padding: 5px;
+    padding: 5px 0;
+        /* 添加一些上下边距，使内容更有空间感 */
+        text-align: left;
+        /* 文字居中对齐 */
 }
+
 
 .intro h2 {
     font-size: 24px;
@@ -63,24 +67,56 @@ body {
             border-radius: 10px;
             border-left: 5px solid #009688;
             border-right: 5px solid #009688;
-        }
-                                                                                                                                .intro h2:hover {
-                                                                                                                                    background-color: #00968780;
-                                                                                                                                    color: white;
-    }
-                                                                                                                                .content {
-                                                                                                                                    padding: 5px;
-                                                                                                                                }
-.intro p {
-    font-size: 18px;
-    margin-left: 50px;
-    text-align: left;
 }
 
-/* 让图片居中， */
+.intro h2:hover {
+    background-color: #00968780;
+                                                                                                                                    color: white;
+}
+
+ .content {
+     padding: 5px;
+ }
+
+ .intro p {
+    font-size: 18px;
+        /* 字体大小 */
+            color: #666;
+            /* 字体颜色 */
+            line-height: 1.5;
+            /* 行高，提高可读性 */
+            margin: 0 50px;
+            margin-bottom: 20px;
+            /* 段落居中 */
+            max-width: 1000px;
+            /* 最大宽度，避免在大屏幕上过宽 */
+            padding: 0 15px;
+            /* 左右内边距，使文本在小屏幕上不会太紧凑 */
+        }
+        
+        .image-overview {
+            display: flex;
+            /* 使用Flex布局 */
+            justify-content: left;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            margin-top: 20px;
+            /* 添加上边距，与上文分隔 */
+}
+
 .intro img {
+    max-width: 100%;
+        /* 确保图片不超过其容器宽度 */
+        height: auto;
+        /* 保持图片的原始高宽比 */
+        border: 0px solid #ddd;
+        /* 图片边框 */
+        padding: 1px;
+        /* 图片内边距，与边框之间的空间 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
-    margin: 0 auto;
+    margin: 0 50px;
     width: 50%;
     border: 1px solid #458772;
     padding: 5px;
@@ -92,6 +128,19 @@ body {
         margin-bottom: 20px;
 }
 
+.intro img {
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* 平滑的过渡效果 */
+    cursor: pointer;
+    /* 鼠标悬停时显示为手形 */
+}
+
+.intro img:hover {
+    transform: scale(1.05);
+    /* 图片放大到原始尺寸的105% */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* 增加一个轻微的阴影效果 */
+}
 .content h2 {
     font-size: 24px;
     margin-left: 50px;
