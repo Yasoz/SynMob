@@ -29,12 +29,121 @@
     </div>
 </div>
 
+
 <div class="content">
     <h2>Example Trajectories</h2>
-    <div class="image-gallery">
-        <img src="./imgs/example_trajectories.gif" alt="Trajectory Image 1">
-        </div>
-        </div>
+    <!-- <div class="image-gallery">
+                    <img src="./imgs/cd_multi_trips.gif" alt="Trajectory Image 1">
+                    <img src="./imgs/cd_od_trips.gif" alt="Trajectory Image 2">
+                    <img src="./imgs/xa_multi_trips.gif" alt="Trajectory Image 3">
+                    <img src="./imgs/xa_od_trips.gif" alt="Trajectory Image 4">
+                    </div> -->
+        <div class="image-gallery">
+            <div class="img-wrapper">
+                <img src="./imgs/cd_multi_trips.gif" alt="Trajectory Image 1">
+                <div class="img-description">Different origin-destination</div>
+            </div>
+            <div class="img-wrapper">
+                <img src="./imgs/cd_od_trips.gif" alt="Trajectory Image 2">
+                <div class="img-description">Same origin-destination</div>
+            </div>
+            <div class="img-wrapper">
+                <img src="./imgs/xa_multi_trips.gif" alt="Trajectory Image 3">
+                <div class="img-description">Different origin-destination</div>
+            </div>
+            <div class="img-wrapper">
+                <img src="./imgs/xa_od_trips.gif" alt="Trajectory Image 4">
+                <div class="img-description">Same origin-destination</div>
+            </div>
+            </div>
+            
+            </div>
+            
+            
+            
+            <table border="1" cellspacing="0" cellpadding="5">
+                <caption>Summary of comparison with existing trajectory datasets</caption>
+                <thead>
+                    <tr>
+                        <th>Dataset</th>
+                        <th>GPS trajectory</th>
+                        <th>Avalibility</th>
+                        <th>Data quality</th>
+                        <th>Privacy</th>
+                        <th># Trajectory</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a
+                                href="https://www.microsoft.com/en-us/research/publication/geolife-gps-trajectory-dataset-user-guide">GeoLife</a>
+                        </td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✗</td>
+                        <td>✗</td>
+                        <td>17,621</td>
+                    </tr>
+                    <tr>
+                        <td><a
+                                href="https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample">T-drive</a>
+                        </td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✗</td>
+                        <td>✗</td>
+                        <td>10,357</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.kaggle.com/datasets/crailtap/taxi-trajectory">Porto</a></td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✗</td>
+                        <td>✗</td>
+                        <td>1.7 million</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://sites.google.com/site/yangdingqi/home/foursquare-dataset">Foursquare</a></td>
+                        <td>✗</td>
+                        <td>✓</td>
+                        <td>--</td>
+                        <td>✗</td>
+                        <td>104,478</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page">NYC</a></td>
+                        <td>✗</td>
+                        <td>✓</td>
+                        <td>--</td>
+                        <td>✗</td>
+                        <td>1.1 billion</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://cse.hkust.edu.hk/scrg">Taxi-Shanghai</a></td>
+                        <td>✓</td>
+                        <td>✗</td>
+                        <td>✗</td>
+                        <td>✗</td>
+                        <td>1.2 million</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://outreach.didichuxing.com">GAIA</a></td>
+                        <td>✓</td>
+                        <td>✗</td>
+                        <td>✓</td>
+                        <td>✗</td>
+                        <td>3.1 million</td>
+                    </tr>
+                    <tr>
+                        <td>Ours (Synthetic)</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>unrestricted (customize)</td>
+                    </tr>
+                </tbody>
+            </table>
 
 <div class="citation-box">
     <h3>Citation</h3>
