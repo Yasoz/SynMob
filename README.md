@@ -1,4 +1,4 @@
-# [SynMob](https://yasoz.github.io/SynthTraj/)
+# [SynMob](https://yasoz.github.io/SynMob/)
 
 ## Introduction
 
