@@ -17,7 +17,7 @@ import type { Position, Color, Material, MapViewState } from '@deck.gl/core';
 const DATA_URL = {
     //   BUILDINGS:
     //     'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/trips/buildings.json', // eslint-disable-line
-    TRIPS: './public/trips.json' // eslint-disable-line
+    TRIPS: '/trips.json' // eslint-disable-line
 };
 
 const ambientLight = new AmbientLight({
@@ -109,6 +109,7 @@ export default function App({
     theme?: Theme;
 }) {
     const [time, setTime] = useState(0);
+    const [tripsData, setTripsData] = useState<Trip[] | null>(null);
 
     useEffect(() => {
         const animation = animate({
@@ -121,6 +122,12 @@ export default function App({
         return () => animation.stop();
     }, [loopLength, animationSpeed]);
 
+    useEffect(() => {
+        fetch(DATA_URL.TRIPS)
+            .then(res => res.json())
+            .then(data => setTripsData(data));
+    }, []);
+
     const layers = [
         // This is only needed when using shadow effects
         new PolygonLayer<Position[]>({
@@ -132,7 +139,7 @@ export default function App({
         }),
         new TripsLayer<Trip>({
             id: 'trips',
-            data: trips,
+            data: tripsData || [],
             getPath: d => d.path,
             getTimestamps: d => d.timestamps,
             getColor: d => (d.vendor === 0 ? theme.trailColor0 : theme.trailColor1),
