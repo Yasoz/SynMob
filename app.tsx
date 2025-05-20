@@ -15,9 +15,7 @@ import type { Position, Color, Material, MapViewState } from '@deck.gl/core';
 
 // Source data CSV
 const DATA_URL = {
-    //   BUILDINGS:
-    //     'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/trips/buildings.json', // eslint-disable-line
-    TRIPS: '/trips.json' // eslint-disable-line
+    TRIPS: '/SynMob/trips.json'
 };
 
 const ambientLight = new AmbientLight({
