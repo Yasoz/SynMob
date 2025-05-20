@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(to bottom,  #3490de, #6fe7dd);
+    background: linear-gradient(to bottom, #3490de, #6fe7dd);
     padding: 20px;
     text-align: center;
     color: white;
@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     animation: fadeInDown 0.8s forwards;
-        opacity: 0;
+    opacity: 0;
 }
 
 .header h1 {
@@ -45,8 +45,8 @@ body {
 
 .button-link button:hover {
     background-color: #dddddd;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        transform: scale(1.25);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.25);
 }
 
 
@@ -62,9 +62,9 @@ body {
     text-align: left;
     display: inline-block;
     padding: 5px 20px;
-        border-radius: 10px;
-        border-left: 5px solid #009688;
-        border-right: 5px solid #009688;
+    border-radius: 10px;
+    border-left: 5px solid #009688;
+    border-right: 5px solid #009688;
 }
 
 .intro h2:hover {
@@ -72,20 +72,20 @@ body {
     color: white;
 }
 
- .content {
-     padding: 5px;
- }
+.content {
+    padding: 5px;
+}
 
- .intro p {
+.intro p {
     font-size: 16px;
-        color: #666;
+    color: #666;
     line-height: 1.5;
     margin: 0 50px;
-        margin-bottom: 20px;
+    margin-bottom: 20px;
     max-width: 1000px;
     padding: 0 15px;
 }
-        
+
 .image-overview {
     display: flex;
     justify-content: left;
@@ -108,8 +108,8 @@ body {
     opacity: 0;
     transform: translateY(-50px);
     transition: all 0.5s;
-        animation: fadeInUp 1s forwards;
-        margin-bottom: 20px;
+    animation: fadeInUp 1s forwards;
+    margin-bottom: 20px;
 }
 
 .intro img {
@@ -176,6 +176,7 @@ table a {
 table a:hover {
     text-decoration: underline;
 }
+
 .summtable h2 {
     font-size: 24px;
     margin-left: 50px;
@@ -192,15 +193,16 @@ table a:hover {
     background-color: #00968780;
     color: white;
 }
+
 .content h2 {
     font-size: 24px;
     margin-left: 50px;
     text-align: left;
     display: inline-block;
-        padding: 5px 20px;
-        border-radius: 10px;
-        border-left: 5px solid #009688;
-        border-right: 5px solid #009688;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border-left: 5px solid #009688;
+    border-right: 5px solid #009688;
 }
 
 
@@ -212,36 +214,38 @@ table a:hover {
 .content p {
     font-size: 18px;
     margin-left: 50px;
-        text-align: left;
+    text-align: left;
 }
 
 .image-gallery {
     width: 70%;
     display: flex;
     justify-content: left;
-        align-items: center;
-        margin-top: 20px;
-        margin-left: 35px;
-    }
-    
-    .img-wrapper {
-        position: relative;
-        width: 20%;
-        margin: 0 10px;
-        cursor: pointer;
-        overflow: visible;
-    }
-                .img-wrapper img {
-                    width: 100%;
-                    max-width: 450px;
-                    border-radius: 10px;
-                    transition: transform 0.3s, box-shadow 0.3s;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 20%;
+    margin: 0 10px;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.img-wrapper img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid #458772;
     opacity: 0;
     transform: translateY(-50px);
     animation: fadeInUp 1s forwards;
     /* margin-bottom: 20px; */
 }
+
 .img-wrapper:hover img {
     transform: translateY(0) scale(1.25);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -272,6 +276,7 @@ table a:hover {
     display: block;
     opacity: 1;
 }
+
 .citation-box {
     margin: 20px 50px;
     background-color: #ffffff;
@@ -300,10 +305,11 @@ table a:hover {
     font-family: 'Courier New', Courier, monospace;
     transition: border 0.3s;
     background: #c3bef029;
-        color: #2e1210;
+    color: #2e1210;
 }
 
-.citation-box textarea:hover, .citation-box textarea:focus {
+.citation-box textarea:hover,
+.citation-box textarea:focus {
     border: 1px solid #009688;
 }
 
@@ -339,6 +345,7 @@ footer {
         font-size: 36px;
     }
 }
+
 @media only screen and (max-width: 600px) {
     .image-gallery {
         flex-direction: column;
@@ -349,15 +356,91 @@ footer {
         /* Remove the left margin */
     }
 
-        .img-wrapper {
-            width: 80%;
-            /* Make images take up most of the screen width */
-            margin: 10px 0;
-            /* Adjust the vertical margin */
-        }
-    
-        .img-wrapper img {
-            margin-bottom: 10px;
-            /* Adjust the bottom margin */
-        }
-        }
+    .img-wrapper {
+        width: 80%;
+        /* Make images take up most of the screen width */
+        margin: 10px 0;
+        /* Adjust the vertical margin */
+    }
+
+    .img-wrapper img {
+        margin-bottom: 10px;
+        /* Adjust the bottom margin */
+    }
+}
+
+.visualization-section {
+    margin: 10px 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Visualization h2 {
+    font-size: 24px;
+    margin-left: 50px;
+    text-align: left;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border-left: 5px solid #009688;
+    border-right: 5px solid #009688;
+}
+
+.Visualization h2:hover {
+    background-color: #00968780;
+    color: white;
+}
+
+
+.visualization-container-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* 容器之间的间距 */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.visualization-container {
+    width: 50%;
+    height: 480px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f8f9fa;
+}
+
+.visualization-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure the map container takes up the full space of its parent */
+#visualization-container .maplibregl-canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Responsive design for the visualization section */
+@media (max-width: 768px) {
+    .visualization-section {
+        margin: 20px 20px;
+        padding: 15px;
+    }
+
+    .visualization-container-wrapper {
+        flex-direction: column;
+        /* 在移动设备上垂直堆叠 */
+        align-items: center;
+    }
+
+    .visualization-container {
+        width: 95%;
+        height: 400px;
+        margin-bottom: 20px;
+        /* 垂直堆叠时的间距 */
+    }
+}
