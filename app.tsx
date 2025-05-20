@@ -32,17 +32,25 @@ const pointLight = new PointLight({
 const lightingEffect = new LightingEffect({ ambientLight, pointLight });
 
 type Theme = {
-    buildingColor: Color;
     trailColor0: Color;
     trailColor1: Color;
+    trailColor2: Color;
+    trailColor3: Color;
+    trailColor4: Color;
+    trailColor5: Color;
+    trailColor6: Color;
     material: Material;
     effects: [LightingEffect];
 };
 
 const DEFAULT_THEME: Theme = {
-    buildingColor: [74, 80, 87],
-    trailColor0: [253, 128, 93],
-    trailColor1: [23, 184, 190],
+    trailColor0: [253, 128, 93],  // 红色
+    trailColor1: [23, 184, 190],  // 青色
+    trailColor2: [255, 215, 0],   // 金色
+    trailColor3: [50, 205, 50],   // 绿色
+    trailColor4: [147, 112, 219], // 紫色
+    trailColor5: [255, 165, 0],   // 橙色
+    trailColor6: [0, 191, 255],   // 深天蓝
     material: {
         ambient: 0.1,
         diffuse: 0.6,
@@ -53,9 +61,9 @@ const DEFAULT_THEME: Theme = {
 };
 
 const INITIAL_VIEW_STATE: MapViewState = {
-    longitude: 104.06,
-    latitude: 30.66,
-    zoom: 13,
+    longitude: 104.072,
+    latitude: 30.68,
+    zoom: 12,
     pitch: 45,
     bearing: 0
 };
@@ -65,10 +73,6 @@ const MAP_STYLE = 'https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-styl
 
 const landCover: Position[][] = [
     [
-        // [-74.0, 40.7],
-        // [-74.02, 40.7],
-        // [-74.02, 40.72],
-        // [-74.0, 40.72]
         [104.06, 30.66],
         [104.04, 30.66],
         [104.04, 30.68],
@@ -76,10 +80,6 @@ const landCover: Position[][] = [
     ]
 ];
 
-type Building = {
-    polygon: Position[];
-    height: number;
-};
 
 type Trip = {
     vendor: number;
@@ -88,7 +88,6 @@ type Trip = {
 };
 
 export default function App({
-    buildings = DATA_URL.BUILDINGS,
     trips = DATA_URL.TRIPS,
     trailLength = 180,
     initialViewState = INITIAL_VIEW_STATE,
@@ -97,7 +96,6 @@ export default function App({
     loopLength = 900, // unit corresponds to the timestamp in source data
     animationSpeed = 1
 }: {
-    buildings?: string | Building[];
     trips?: string | Trip[];
     trailLength?: number;
     loopLength?: number;
@@ -140,7 +138,18 @@ export default function App({
             data: tripsData || [],
             getPath: d => d.path,
             getTimestamps: d => d.timestamps,
-            getColor: d => (d.vendor === 0 ? theme.trailColor0 : theme.trailColor1),
+            getColor: d => {
+                const colors = [
+                    theme.trailColor0,
+                    theme.trailColor1,
+                    theme.trailColor2,
+                    theme.trailColor3,
+                    theme.trailColor4,
+                    theme.trailColor5,
+                    theme.trailColor6
+                ];
+                return colors[d.vendor % colors.length];
+            },
             opacity: 0.3,
             widthMinPixels: 2,
             rounded: true,
@@ -149,17 +158,6 @@ export default function App({
 
             shadowEnabled: false
         }),
-        new PolygonLayer<Building>({
-            id: 'buildings',
-            data: buildings,
-            extruded: true,
-            wireframe: false,
-            opacity: 0.5,
-            getPolygon: f => f.polygon,
-            getElevation: f => f.height,
-            getFillColor: theme.buildingColor,
-            material: theme.material
-        })
     ];
 
     return (

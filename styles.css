@@ -77,12 +77,12 @@ body {
 }
 
 .intro p {
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
     line-height: 1.5;
     margin: 0 50px;
     margin-bottom: 20px;
-    max-width: 1000px;
+    max-width: 90%;
     padding: 0 15px;
 }
 
@@ -218,7 +218,7 @@ table a:hover {
 }
 
 .image-gallery {
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -405,7 +405,7 @@ footer {
 
 .visualization-container {
     width: 50%;
-    height: 480px;
+    height: 450px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
